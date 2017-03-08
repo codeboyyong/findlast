@@ -37,13 +37,14 @@ class ViewController: UIViewController {
 
     
     func initUI(){
-        let circle = Circle.fixedCircle(x: Int(view.frame.width/2), y: Int(view.frame.height/2 + 150))
         
+        //Create setting button====================================================
+        let startBtnCircle = Circle.fixedCircle(x: Int(view.frame.width/2), y: Int(view.frame.height/2 + 150))
         
-        let startBtn  = CircleView(circle: circle)
+        let startBtn  = CircleView(circle: startBtnCircle)
         startBtn.backgroundColor = UIColor.blue
-        let retryLable = UILabel(frame: CGRect(x: 0, y: 0, width: circle.radius, height: circle.radius))
-        retryLable.text = "Settings"
+        let retryLable = UILabel(frame: CGRect(x: 0, y: 0, width: startBtnCircle.radius, height: startBtnCircle.radius))
+        retryLable.text = "Start"
         retryLable.textAlignment = NSTextAlignment.center
         retryLable.center = CGPoint(x: startBtn.frame.width/2, y: startBtn.frame.height/2 )
         
@@ -54,12 +55,13 @@ class ViewController: UIViewController {
         let tap = UITapGestureRecognizer(target: startBtn, action: #selector( CircleView.hide))
         startBtn.addGestureRecognizer(tap)
         
-        let circles = Circle.fixedCircle(x: Int(view.frame.width/2), y: Int(view.frame.height/2 ))
+        //Create start button====================================================
+        let settingCircle = Circle.fixedCircle(x: Int(view.frame.width/2), y: Int(view.frame.height/2 ))
         
-        let settingBtn  = CircleView(circle: circles)
+        let settingBtn  = CircleView(circle: settingCircle)
         settingBtn.backgroundColor = UIColor.red
-        let settingLable = UILabel(frame: CGRect(x: 0, y: 0, width: circle.radius, height: circle.radius))
-        settingLable.text = "Start"
+        let settingLable = UILabel(frame: CGRect(x: 0, y: 0, width: settingCircle.radius, height: settingCircle.radius))
+        settingLable.text = "Settings"
         settingLable.textAlignment = NSTextAlignment.center
         settingLable.center = CGPoint(x: settingBtn.frame.width/2, y: settingBtn.frame.height/2 )
         
@@ -84,9 +86,111 @@ class ViewController: UIViewController {
     
 
     func showSettings(){
+        //show shape button=============================
+        let shapeCircle = Circle.fixedCircle(x: Int(view.frame.width/2), y: Int(view.frame.height/2-150))
+        
+        let shapeBtn  = CircleView(circle: shapeCircle)
+        shapeBtn.backgroundColor = UIColor.red
+        var settingLable = UILabel(frame: CGRect(x: 0, y: 0, width: shapeCircle.radius, height: shapeCircle.radius))
+        settingLable.text = "Shape"
+        settingLable.textAlignment = NSTextAlignment.center
+        settingLable.center = CGPoint(x: shapeBtn.frame.width/2, y: shapeBtn.frame.height/2 )
+        
+        
+        shapeBtn.addSubview(settingLable)
+        self.view.addSubview(shapeBtn)
+        
+        shapeBtn.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector( showShape)))
+        
+        //show shape button=============================
+        let colorCircle = Circle.fixedCircle(x: Int((view.frame.width/2)-150), y: Int(view.frame.height/2-150))
+        
+        let colorBtn  = CircleView(circle: colorCircle)
+        colorBtn.backgroundColor = UIColor.red
+        settingLable = UILabel(frame: CGRect(x: 0, y: 0, width: colorCircle.radius, height: colorCircle.radius))
+        settingLable.text = "color"
+        settingLable.textAlignment = NSTextAlignment.center
+        settingLable.center = CGPoint(x: colorBtn.frame.width/2, y: colorBtn.frame.height/2 )
+        
+        
+        colorBtn.addSubview(settingLable)
+        self.view.addSubview(colorBtn)
+        
+         colorBtn.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector( showColor)))
+        
+ 
+        
+    }
+    
+    func showShape(){
+        //show shape button=============================
+        let shapeCircle = Circle.fixedCircle(x: Int(view.frame.width/2), y: Int(view.frame.height/2-150))
+        
+        let shapeBtn  = CircleView(circle: shapeCircle)
+        shapeBtn.backgroundColor = UIColor.red
+        var settingLable = UILabel(frame: CGRect(x: 0, y: 0, width: shapeCircle.radius, height: shapeCircle.radius))
+        settingLable.text = "Circle"
+        settingLable.textAlignment = NSTextAlignment.center
+        settingLable.center = CGPoint(x: shapeBtn.frame.width/2, y: shapeBtn.frame.height/2 )
+        
+        
+        shapeBtn.addSubview(settingLable)
+        self.view.addSubview(shapeBtn)
+        
+        shapeBtn.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector( showShape)))
+        
+        //show shape button=============================
+        let colorCircle = Circle.fixedCircle(x: Int((view.frame.width/2)-150), y: Int(view.frame.height/2-150))
+        
+        let colorBtn  = CircleView(circle: colorCircle)
+        colorBtn.backgroundColor = UIColor.red
+        settingLable = UILabel(frame: CGRect(x: 0, y: 0, width: colorCircle.radius, height: colorCircle.radius))
+        settingLable.text = "Square"
+        settingLable.textAlignment = NSTextAlignment.center
+        settingLable.center = CGPoint(x: colorBtn.frame.width/2, y: colorBtn.frame.height/2 )
+        
+        
+        colorBtn.addSubview(settingLable)
+        self.view.addSubview(colorBtn)
+        
+        colorBtn.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector( showColor)))
         
     }
 
+    func showColor(){
+        //show shape button=============================
+        let shapeCircle = Circle.fixedCircle(x: Int(view.frame.width/2), y: Int(view.frame.height/2-150))
+        
+        let shapeBtn  = CircleView(circle: shapeCircle)
+        shapeBtn.backgroundColor = UIColor.red
+        var settingLable = UILabel(frame: CGRect(x: 0, y: 0, width: shapeCircle.radius, height: shapeCircle.radius))
+        settingLable.text = "Blacl&White"
+        settingLable.textAlignment = NSTextAlignment.center
+        settingLable.center = CGPoint(x: shapeBtn.frame.width/2, y: shapeBtn.frame.height/2 )
+        
+        
+        shapeBtn.addSubview(settingLable)
+        self.view.addSubview(shapeBtn)
+        
+        shapeBtn.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector( showShape)))
+        
+        //show shape button=============================
+        let colorCircle = Circle.fixedCircle(x: Int((view.frame.width/2)-150), y: Int(view.frame.height/2-150))
+        
+        let colorBtn  = CircleView(circle: colorCircle)
+        colorBtn.backgroundColor = UIColor.red
+        settingLable = UILabel(frame: CGRect(x: 0, y: 0, width: colorCircle.radius, height: colorCircle.radius))
+        settingLable.text = "Colorful"
+        settingLable.textAlignment = NSTextAlignment.center
+        settingLable.center = CGPoint(x: colorBtn.frame.width/2, y: colorBtn.frame.height/2 )
+        
+        
+        colorBtn.addSubview(settingLable)
+        self.view.addSubview(colorBtn)
+        
+        colorBtn.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector( showColor)))
+        
+    }
 
 }
 
