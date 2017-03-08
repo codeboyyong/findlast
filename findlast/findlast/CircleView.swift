@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CircleView: UIView{
+class CircleView: ShapeView{
     //MARK: INIT
     //  override  init(frame: CGRect) {
     //        super.init(frame: frame)
@@ -41,9 +41,6 @@ class CircleView: UIView{
         
     }
     
-    func hide(){
-        self.isHidden=true
-    }
-    
+  
     
 }

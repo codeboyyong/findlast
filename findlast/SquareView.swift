@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SquareView: UIView{
+class SquareView: ShapeView{
     
     
     init(square:Square){

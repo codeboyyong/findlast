@@ -58,4 +58,15 @@ class Square:Shape {
         let square = Square(color: randomColor, length: randomLength, center: randomPoint)
         return square
     }
+    
+    class func fixedSquare(x:Int,y: Int) -> Square{
+        
+        let  randomColor =  ColorUtilitys.randomColor()
+        
+        let center = CGPoint(x: x, y: y)
+        let square = Square(color: randomColor, length: maxLength, center: center)
+        
+        return square
+        
+    }
 }

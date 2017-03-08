@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E228EC131E6FD2D3009A7F0F /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = E228EC121E6FD2D3009A7F0F /* Config.swift */; };
+		E228EC151E6FD7B7009A7F0F /* ShapeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E228EC141E6FD7B7009A7F0F /* ShapeView.swift */; };
 		E2C079851E6CDB520074CA29 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C079841E6CDB520074CA29 /* AppDelegate.swift */; };
 		E2C079871E6CDB520074CA29 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2C079861E6CDB520074CA29 /* ViewController.swift */; };
 		E2C0798A1E6CDB520074CA29 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2C079881E6CDB520074CA29 /* Main.storyboard */; };
@@ -41,6 +43,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E228EC121E6FD2D3009A7F0F /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		E228EC141E6FD7B7009A7F0F /* ShapeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShapeView.swift; sourceTree = "<group>"; };
 		E2C079811E6CDB520074CA29 /* findlast.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = findlast.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2C079841E6CDB520074CA29 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E2C079861E6CDB520074CA29 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -149,6 +153,7 @@
 				E2C079B31E6CDFF00074CA29 /* Shape.swift */,
 				E2C079B51E6CE20C0074CA29 /* Circle.swift */,
 				E2C079BA1E6CF1890074CA29 /* Square.swift */,
+				E228EC121E6FD2D3009A7F0F /* Config.swift */,
 			);
 			name = model;
 			sourceTree = "<group>";
@@ -166,6 +171,7 @@
 			children = (
 				E2C079BD1E6CF32D0074CA29 /* CircleView.swift */,
 				E2C079BF1E6CF3760074CA29 /* SquareView.swift */,
+				E228EC141E6FD7B7009A7F0F /* ShapeView.swift */,
 			);
 			name = view;
 			sourceTree = "<group>";
@@ -312,8 +318,10 @@
 				E2C079B91E6CE53E0074CA29 /* UIUtils.swift in Sources */,
 				E2C079871E6CDB520074CA29 /* ViewController.swift in Sources */,
 				E2C079B61E6CE20C0074CA29 /* Circle.swift in Sources */,
+				E228EC151E6FD7B7009A7F0F /* ShapeView.swift in Sources */,
 				E2C079B41E6CDFF00074CA29 /* Shape.swift in Sources */,
 				E2C079BE1E6CF32D0074CA29 /* CircleView.swift in Sources */,
+				E228EC131E6FD2D3009A7F0F /* Config.swift in Sources */,
 				E2C079851E6CDB520074CA29 /* AppDelegate.swift in Sources */,
 				E2C079C01E6CF3760074CA29 /* SquareView.swift in Sources */,
 			);
@@ -566,6 +574,7 @@
 				E2C079AB1E6CDB530074CA29 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E2C079AC1E6CDB530074CA29 /* Build configuration list for PBXNativeTarget "findlastTests" */ = {
 			isa = XCConfigurationList;
@@ -574,6 +583,7 @@
 				E2C079AE1E6CDB530074CA29 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E2C079AF1E6CDB530074CA29 /* Build configuration list for PBXNativeTarget "findlastUITests" */ = {
 			isa = XCConfigurationList;
@@ -582,6 +592,7 @@
 				E2C079B11E6CDB530074CA29 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
